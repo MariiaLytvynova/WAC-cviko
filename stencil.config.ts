@@ -20,7 +20,12 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  // testing: {
+  //   browserHeadless: "shell",
+  // },
   testing: {
-    browserHeadless: "shell",
-  },
+    transformIgnorePatterns: [
+      '/node_modules/(?!(@material/web)/)'
+    ]
+  }
 };
