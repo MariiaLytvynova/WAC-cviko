@@ -29,6 +29,12 @@ export class MlAmbulanceWlList {
           estimatedStart: new Date(Date.now() + 5 * 60),
           estimatedDurationMinutes: 15,
           condition: 'Bolesti hrdla'
+      }, {
+          name: 'Bc. August Cézar',
+          patientId: '10096',
+          estimatedStart: new Date(Date.now() + 30 * 60),
+          estimatedDurationMinutes: 20,
+          condition: 'Teploty'
       }]
     );
   }
