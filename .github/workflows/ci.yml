@@ -45,7 +45,7 @@ jobs:
         tags: |
           type=schedule
           type=ref,event=branch
-          type=ref,event=branch,suffix={{date '.20260310.1446'}} # napr `main.20210930.1200`
+          type=ref,event=branch,suffix={{date '.YYYYMMDD.HHmm'}} # napr `main.20210930.1200`
           type=ref,event=tag
           type=semver,pattern={{version}} # napr pri tagu  `v1.0.0`
           type=semver,pattern={{major}}.{{minor}} # napr `1.0`
