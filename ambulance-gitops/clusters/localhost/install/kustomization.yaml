@@ -9,3 +9,6 @@ labels:
 
 resources:
 - ../../../apps/ml-ambulance-ufe
+
+components:
+- ../../../components/version-developers

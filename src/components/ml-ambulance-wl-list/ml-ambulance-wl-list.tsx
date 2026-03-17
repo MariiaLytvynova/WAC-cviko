@@ -24,7 +24,7 @@ export class MlAmbulanceWlList {
           estimatedDurationMinutes: 20,
           condition: 'Teploty'
       }, {
-          name: 'Ing. Ferdinand Trety',
+          name: 'Ing. Ferdinand Piaty',
           patientId: '10028',
           estimatedStart: new Date(Date.now() + 5 * 60),
           estimatedDurationMinutes: 15,
