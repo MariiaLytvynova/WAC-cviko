@@ -12,7 +12,7 @@ spec:
       value: Zoznam čakajúcich ml
     - name: supporting-text
       value: |
-        Spravuje zoznam pacientov čakajúcich na vyšetrenie v ambulancii
+        Spravuje zoznam pacientov čakajúcich na vyšetrenie v nasej ambulancii
     - name: material-icon
       value: home_health
     - name: href # presmerovanie po kliknutí na element polyfea-md-app
