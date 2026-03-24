@@ -11,9 +11,11 @@ declare global {
 })
 export class MlAmbulanceWlApp {
   
-    @State() private relativePath = "";
+  @State() private relativePath = "";
 
   @Prop() basePath: string="";
+  @Prop() apiBase: string;
+  @Prop() ambulanceId: string;
 
   componentWillLoad() {
     const baseUri = new URL(this.basePath, document.baseURI || "/").pathname;
@@ -51,17 +53,27 @@ export class MlAmbulanceWlApp {
   }
 
   return (
-    <Host>
-      { element === "editor"
-      ? <ml-ambulance-wl-editor entry-id={entryId}
-          oneditor-closed={ () => navigate("./list")} >
-        </ml-ambulance-wl-editor>
-      : <ml-ambulance-wl-list
-                  onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
-      </ml-ambulance-wl-list>
-      }
+    // <Host>
+    //   { element === "editor"
+    //   ? <ml-ambulance-wl-editor entry-id={entryId}
+    //       oneditor-closed={ () => navigate("./list")} >
+    //     </ml-ambulance-wl-editor>
+    //   : <ml-ambulance-wl-list
+    //               onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
+    //   </ml-ambulance-wl-list>
+    //   }
 
-    </Host>
+    // </Host>
+    <Host>
+        { element === "editor"
+        ? <ml-ambulance-wl-editor entry-id={entryId}
+          oneditor-closed={ () => navigate("./list")}
+        ></ml-ambulance-wl-editor>
+        : <ml-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
+          onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
+          </ml-ambulance-wl-list>
+        }
+      </Host>
   );
 }
 }
