@@ -57,6 +57,10 @@ render() {
         )}
       </md-list>
       }
+          <md-filled-icon-button class="add-button"
+      onclick={() => this.entryClicked.emit("@new")}>
+      <md-icon>add</md-icon>
+    </md-filled-icon-button>
     </Host>
   );
 }

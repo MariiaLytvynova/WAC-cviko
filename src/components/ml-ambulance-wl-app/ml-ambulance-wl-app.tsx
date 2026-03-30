@@ -67,6 +67,7 @@ export class MlAmbulanceWlApp {
     <Host>
         { element === "editor"
         ? <ml-ambulance-wl-editor entry-id={entryId}
+          ambulance-id={this.ambulanceId} api-base={this.apiBase}
           oneditor-closed={ () => navigate("./list")}
         ></ml-ambulance-wl-editor>
         : <ml-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
