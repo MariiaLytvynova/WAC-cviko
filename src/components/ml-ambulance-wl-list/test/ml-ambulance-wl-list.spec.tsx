@@ -34,7 +34,7 @@ describe('ml-ambulance-wl-list', () => {
     
     const page = await newSpecPage({
       components: [MlAmbulanceWlList],
-      html: `<ml-ambulance-wl-list></ml-ambulance-wl-list>`,
+      html: `<ml-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></ml-ambulance-wl-list>`,
     });
       const wlList = page.rootInstance as MlAmbulanceWlList;
       const expectedPatients = wlList?.waitingPatients?.length
