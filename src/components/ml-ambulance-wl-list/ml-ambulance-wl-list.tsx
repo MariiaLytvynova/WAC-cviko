@@ -15,7 +15,8 @@ export class MlAmbulanceWlList {
 @Prop() ambulanceId: string;
 @State() errorMessage: string;
   
-  waitingPatients: WaitingListEntry[];
+  // waitingPatients: WaitingListEntry[];
+  @State() waitingPatients: WaitingListEntry[] = [];
 
   private async getWaitingPatientsAsync(): Promise<WaitingListEntry[]> {
     // be prepared for connectivitiy issues
