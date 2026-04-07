@@ -42,7 +42,6 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "openapi": "openapi-generator-cli generate",
-
     "test:jest": "jest --config ./jest.config.js"
   },
   "devDependencies": {

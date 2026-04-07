@@ -29,7 +29,7 @@ describe('ml-ambulance-wl-list', () => {
     fetchMock.resetMocks();
   });
 
-  it('renders', async () => {
+  it('renders sample entries', async () => {
     fetchMock.mockResponseOnce(JSON.stringify(sampleEntries));
     
     const page = await newSpecPage({
@@ -46,6 +46,8 @@ describe('ml-ambulance-wl-list', () => {
       expect(expectedPatients).toEqual(sampleEntries.length);
       expect(items.length).toEqual(expectedPatients);
   });
+
+  
 
   it('renders error message on network issues', async () => {
     // Mock the network error

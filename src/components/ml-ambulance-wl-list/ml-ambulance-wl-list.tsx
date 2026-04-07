@@ -11,9 +11,9 @@ import { AmbulanceWaitingListApi, WaitingListEntry, Configuration } from '../../
 })
 export class MlAmbulanceWlList {
 @Event({ eventName: "entry-clicked"}) entryClicked: EventEmitter<string>
-  @Prop() apiBase: string;
-  @Prop() ambulanceId: string;
-  @State() errorMessage: string;
+@Prop() apiBase: string;
+@Prop() ambulanceId: string;
+@State() errorMessage: string;
   
   waitingPatients: WaitingListEntry[];
 
@@ -57,7 +57,8 @@ render() {
         )}
       </md-list>
       }
-          <md-filled-icon-button class="add-button"
+      
+      <md-filled-icon-button class="add-button"
       onclick={() => this.entryClicked.emit("@new")}>
       <md-icon>add</md-icon>
     </md-filled-icon-button>
