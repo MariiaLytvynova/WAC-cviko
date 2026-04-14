@@ -38,6 +38,7 @@ export class MlAmbulanceWlApp {
   }
 
   render() {
+  console.debug("ml-ambulance-wl-app.render() - path: %s", this.relativePath);
   let element = "list"
   let entryId = "@new"
 
